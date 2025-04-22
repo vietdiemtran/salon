@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0;url=/salon/" />
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+      (function () {
+        var currentPath = window.location.pathname;
+        var basePath = "/salon"; // Repo name ở đây
+
+        // Nếu URL hiện tại không bắt đầu bằng /salon thì redirect
+        if (!currentPath.startsWith(basePath)) {
+          var redirectTo =
+            basePath +
+            currentPath +
+            window.location.search +
+            window.location.hash;
+          window.location.replace(redirectTo);
+        }
+        // Ngược lại, đang ở đúng /salon rồi thì không làm gì
+      })();
+    </script>
   </head>
   <body></body>
 </html>
