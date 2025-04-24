@@ -1,0 +1,1 @@
+import{B as a}from"./index-Co3jKZaL.js";const r=async t=>(await a.get("/admin/staff",{params:t})).data.result,f=async t=>(await a.post("/admin/staff",t)).data.result,o=async({id:t,data:s})=>(await a.put(`/admin/staff/${t}`,s)).data.result,c=async t=>{await a.delete(`/admin/staff/${t}`)};export{f as c,c as d,r as g,o as u};
